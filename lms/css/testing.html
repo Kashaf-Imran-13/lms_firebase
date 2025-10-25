@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teacher Dashboard - UniLearn</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { poppins: ['Poppins', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="testing.css">
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-poppins transition-all duration-300">
+  
+  <!-- Navbar -->
+  <nav class="navbar flex items-center justify-between px-6 py-4 bg-white dark:bg-gray-800 shadow-md">
+    <div class="flex items-center space-x-4">
+      <button id="menuToggle" class="text-2xl lg:hidden">☰</button>
+      <h1 class="text-2xl font-bold text-blue-600 dark:text-blue-400">UniLearn LMS</h1>
+    </div>
+    <div class="flex items-center space-x-4">
+      <button id="themeToggle" class="theme-btn">🌞</button>
+      <img src="https://i.pravatar.cc/40" alt="User" class="w-10 h-10 rounded-full border-2 border-blue-500">
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <aside id="sidebar" class="sidebar fixed top-0 left-0 h-full w-64 bg-white dark:bg-gray-800 shadow-lg transform -translate-x-full lg:translate-x-0 transition-transform duration-300">
+    <div class="p-6">
+      <h2 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-6">Teacher Menu</h2>
+      <ul class="space-y-4">
+        <li><a href="#" class="menu-link">📘 Dashboard</a></li>
+        <li><a href="#" class="menu-link">🧑‍🏫 My Courses</a></li>
+        <li><a href="#" class="menu-link">📅 Schedule</a></li>
+        <li><a href="#" class="menu-link">💬 Messages</a></li>
+        <li><a href="#" class="menu-link">⚙️ Settings</a></li>
+      </ul>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content lg:ml-64 p-6 transition-all duration-300">
+    <h2 class="text-3xl font-semibold mb-6">Welcome Back, Aman 👋</h2>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="card">📚 <h3>Courses</h3><p>12 Active</p></div>
+      <div class="card">👩‍🎓 <h3>Students</h3><p>340 Enrolled</p></div>
+      <div class="card">⭐ <h3>Rating</h3><p>4.8 / 5.0</p></div>
+    </div>
+
+    <section class="mt-10 bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md">
+      <h3 class="text-2xl font-semibold mb-4">Upcoming Lessons</h3>
+      <ul class="space-y-3">
+        <li>📅 Monday: Python Basics</li>
+        <li>📅 Wednesday: Data Analysis</li>
+        <li>📅 Friday: Project Review</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="testing.js"></script>
+</body>
+</html>

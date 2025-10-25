@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - UniLearn LMS</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/studentDashboard.css">
+</head>
+<body class=" min-h-screen relative">
+
+  <!-- Background shapes -->
+  <div class="background-shape shape1"></div>
+  <div class="background-shape shape2"></div>
+  <div class="background-shape shape3"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1 class="logo">UniLearn</h1>
+    <div class="nav-right">
+      
+      <span id="studentName" class="student-name"></span>
+      <button id="logoutBtn" class="logout-btn">Logout</button>
+    </div>
+  </nav>
+
+  <!-- Welcome Banner -->
+  <div class="welcome-banner">
+    <h2>Welcome Back, <span id="welcomeName"></span>!</h2>
+    <p>Let's continue your learning journey</p>
+  </div>
+
+  <!-- Stats Section -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-icon">📚</div>
+      <h3>Courses Enrolled</h3>
+      <p id="coursesCount">3</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📝</div>
+      <h3>Assignments</h3>
+      <p id="assignmentsCount">0</p>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">💬</div>
+      <h3>Messages</h3>
+      <p id="messagesCount">0</p>
+    </div>
+  </div>
+
+  <!-- Courses Section -->
+  <h3 class="section-title">Your Courses</h3>
+  <div id="coursesList" class="courses-grid"> 
+     <section id="courses" class="py-16 fade-in">
+    <div class="max-w-7xl mx-auto px-6">
+     
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Example Course Card -->
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden transition">
+          <img src="./asset/Aijpeg.jpeg" 
+               alt="AI Course" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-2">Introduction to AI</h3>
+            <p class="text-gray-500 mb-3">Learn the fundamentals of Artificial Intelligence.</p>
+            <a href="course.html?id=ai101" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Course</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden transition">
+          <img src="./asset/webdev.jpeg" 
+               alt="Web Development" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-2">Web Development</h3>
+            <p class="text-gray-500 mb-3">Build modern, responsive websites using HTML, CSS, and JS.</p>
+            <a href="course.html?id=web101" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Course</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl shadow hover:shadow-lg overflow-hidden transition">
+          <img src="./asset/digital.jpeg" 
+               alt="Digital Marketing" class="w-full h-48 object-cover">
+          <div class="p-6">
+            <h3 class="font-semibold text-xl mb-2">Digital Marketing</h3>
+            <p class="text-gray-500 mb-3">Master SEO, social media, and online marketing strategies.</p>
+            <a href="course.html?id=dm101" class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">View Course</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+  <!-- Assignments Section -->
+  <h3 class="section-title">Assignments</h3>
+  <div id="assignmentsList" class="assignments-grid"></div>
+
+  <!-- Messages Section -->
+  <h3 class="section-title">Messages / Notifications</h3>
+  <div id="messagesList" class="messages-grid"></div>
+
+  <!-- JS -->
+  <script type="module" src="js/studentDashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+:root { --glass: rgba(255,255,255,0.85); }
+
+body { font-family: 'Poppins', sans-serif; transition: background .3s, color .3s; }
+
+/* Background Shapes */
+.background-shape { position: absolute; border-radius:50%; opacity:.12; z-index:-1; animation: float 12s infinite alternate; }
+.shape1 { width:300px; height:300px; background:#f59e0b; top:-80px; left:-80px; }
+.shape2 { width:320px; height:320px; background:#ef4444; bottom:-80px; right:-80px; }
+.shape3 { width:240px; height:240px; background:#3b82f6; top:40%; left:50%; transform:translate(-50%,-50%); }
+@keyframes float { 0%{transform:translateY(0)}100%{transform:translateY(18px)} }
+
+/* NAVBAR */
+.navbar { background:var(--glass); backdrop-filter: blur(6px); border-radius: 0 0 12px 12px; }
+.theme-btn { background:#facc15; color:#111827; border-radius:8px; padding:.4rem .6rem; }
+.dark .theme-btn { background:#2563eb; color:#fff; }
+
+/* Cards & stats */
+.stat-card { background:var(--glass); border-radius:12px; padding:1rem; box-shadow:0 8px 24px rgba(13,38,76,0.06); }
+.card-course { background:linear-gradient(180deg,#fff,#f8fafc); padding:1rem; border-radius:12px; box-shadow:0 10px 30px rgba(15,23,42,0.06); transition:transform .18s; }
+.card-course:hover { transform:translateY(-6px); }
+
+/* Buttons */
+.btn-primary { background:linear-gradient(90deg,#2563eb,#4f46e5); color:#fff; padding:.55rem .9rem; border-radius:.65rem; font-weight:600; }
+.btn-ghost { background:transparent; border:1px solid rgba(15,23,42,0.06); padding:.45rem .75rem; border-radius:.5rem; }
+
+/* inputs */
+.input-field { width:100%; padding:.7rem .85rem; border-radius:.6rem; border:1px solid rgba(15,23,42,0.06); background:#fff; }
+
+/* Modal */
+.modal { position:fixed; inset:0; display:grid; place-items:center; background:rgba(2,6,23,0.45); z-index:60; }
+.modal-box { width:100%; max-width:720px; background:var(--glass); border-radius:12px; padding:1.25rem; box-shadow:0 20px 60px rgba(2,6,23,0.25); }
+
+/* Toast */
+.toast { position:fixed; right:1rem; bottom:1rem; background:#111827; color:#fff; padding:.6rem 1rem; border-radius:.6rem; z-index:80; }
+
+/* Responsive tweaks */
+@media (max-width:768px) {
+  .card-course{ padding:.85rem; }
+}
+
+/* Dark tweaks */
+.dark .card-course { background: linear-gradient(180deg,#0b1220,#0f1724); box-shadow:0 8px 30px rgba(2,6,23,0.6); }
+.dark .input-field { background: rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06); color:#e6eef8; }

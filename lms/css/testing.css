@@ -1,0 +1,62 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+  z-index: 50;
+}
+.menu-link {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: #374151;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.menu-link:hover {
+  background-color: #2563eb;
+  color: white;
+}
+.dark .menu-link {
+  color: #d1d5db;
+}
+.dark .menu-link:hover {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Cards */
+.card {
+  background-color: white;
+  color: #1f2937;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+.dark .card {
+  background-color: #1f2937;
+  color: #f3f4f6;
+}
+
+/* Theme Button */
+.theme-btn {
+  background-color: #facc15;
+  color: #1f2937;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.9rem;
+  transition: all 0.3s ease;
+}
+.theme-btn:hover {
+  transform: scale(1.1);
+}
+.dark .theme-btn {
+  background-color: #2563eb;
+  color: white;
+}
