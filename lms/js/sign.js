@@ -47,7 +47,7 @@ signupForm.addEventListener("submit", async (e) => {
 
     // Redirect based on role
     if (role === "student") window.location.href = "studentDashboard.html";
-    else window.location.href = "TeacherDashboard.html";
+    else window.location.href = "teacherDashboard.html";
 
   } catch (error) {
     console.error("Error creating user or saving data:", error);
@@ -93,3 +93,4 @@ if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.match
   html.classList.remove('dark');
 }
 updateIcon();
+
